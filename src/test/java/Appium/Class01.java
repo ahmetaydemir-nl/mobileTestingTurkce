@@ -28,8 +28,10 @@ public class Class01 {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
        // desiredCapabilities.setCapability("automationName","UiAutomator2");
-        desiredCapabilities.setCapability(MobileCapabilityType.APP,"/Users/mehmetaliayyildiz/IdeaProjects/mobileTestingTurkce/src/Apps/GestureTool.apk");
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
+       // desiredCapabilities.setCapability(MobileCapabilityType.APP,"/Users/mehmetaliayyildiz/IdeaProjects/mobileTestingTurkce/src/Apps/GestureTool.apk");
+        desiredCapabilities.setCapability("appPackage","com.davemac327.gesture.tool");
+        desiredCapabilities.setCapability("appActivity","com.davemac327.gesture.tool.GestureBuilderActivity");
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 
         AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http:127.0.0.1:4723/wd/hub"),desiredCapabilities);
 
@@ -46,7 +48,10 @@ public class Class01 {
         driver.findElementByXPath("(//android.widget.Button)[1]");
 
         //xpath attribute
-        driver.findElementByXPath("//android.widget.Button[@text='Add gesture']").click();
+     //   driver.findElementByXPath("//android.widget.Button[@text='Add gesture']").click();
+
+        //test butonu tikla
+        driver.findElementById("com.davemac327.gesture.tool:id/testButton").click();
 
     }
 
