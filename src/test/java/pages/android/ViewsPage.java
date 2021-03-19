@@ -8,14 +8,11 @@ import utilities.Driver;
 
 import java.time.Duration;
 
-public class ApiDemosPage {
-    public ApiDemosPage(){
+public class ViewsPage {
+    public ViewsPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)),this);
     }
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Preference']")
-    public WebElement preference;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Views']")
-    public WebElement views;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Drag and Drop']")
+    public WebElement dragAndDrop;
 }
