@@ -16,23 +16,18 @@ public class WebAppChrome {
             public void test() throws MalformedURLException, InterruptedException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 
-//        desiredCapabilities.setCapability(CapabilityType.PLATFORM_NAME,"Android");
-//        desiredCapabilities.setCapability("platformName","Android");
-
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "AndroidEmulator");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
         desiredCapabilities.setCapability("chromedriverExecutable","/Users/mehmetaliayyildiz/IdeaProjects/mobileTestingTurkce/driver/chromedriver");
-
-//        desiredCapabilities.setCapability("appPackage", "com.google.android.dialer");
-//        desiredCapabilities.setCapability("appActivity", "com.google.android.dialer.extensions.GoogleDialtactsActivity");
-        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        //desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
 
         AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("http:127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
         driver.get("https://facebook.com");
+
         //suan hangi gorunumde
         System.out.println("Suan ki durum "+driver.getContext());
 
@@ -48,11 +43,19 @@ public class WebAppChrome {
         }
 
         System.out.println("son durum "+driver.getContext());
-
         /*
         kullanici adi gir "ali"
         sifre "veli"
         login / giris tusuna
          */
+        driver.findElementByXPath("//*[@id='accept-cookie-banner-label']").click();
+        Thread.sleep(3000);
+        driver.findElementByXPath("//input[@name='email']").sendKeys("ali");
+        Thread.sleep(3000);
+        driver.findElementByXPath("//input[@name='pass']").sendKeys("veli");
+        Thread.sleep(3000);
+        driver.findElementByXPath("//button[@name='login']").click();
+
+
     }
 }
