@@ -26,6 +26,9 @@ public class ViewsPage {
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Spinner']")
     public WebElement spinner;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Expandable Lists']")
+    public WebElement expandableLists;
+
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='TextSwitcher']")
     public WebElement textSwitcher;
     @AndroidFindBy (id="com.touchboarder.android.api.demos:id/next")
