@@ -2,8 +2,10 @@ package stepdefinitions;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.android.ApiDemosPage;
 import pages.android.DragAndDropPage;
@@ -38,6 +40,7 @@ public class DragAndDropStepDefs {
         Thread.sleep(3000);
         Assert.assertTrue(dragAndDropPage.actualText.isDisplayed());
     }
+
 
 
 }
