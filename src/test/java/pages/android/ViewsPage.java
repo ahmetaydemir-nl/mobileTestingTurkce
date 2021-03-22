@@ -19,4 +19,7 @@ public class ViewsPage {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Tabs']")
     public List<WebElement> tabs;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='WebView']")
+    public WebElement webView;
 }

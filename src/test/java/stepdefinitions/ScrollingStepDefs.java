@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import io.cucumber.java.en.Given;
@@ -47,4 +48,13 @@ public class ScrollingStepDefs {
         }
     }
 
+    @Given("kullanici  webview sayfasina gidecek")
+    public void kullaniciWebviewSayfasinaGidecek() {
+        AndroidDriver driver = (AndroidDriver) Driver.getAppiumDriver();
+
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"WebView\"))");
+
+        viewsPage.webView.click();
+
+    }
 }
