@@ -8,3 +8,4 @@
       When kulanici People Names basili tutacak ve popup acilacak
       When kullanici Simple action tiklayacak
       Then Tost mesaj "People Names" icerdigini onayla
+      Then take the screenshot

@@ -12,6 +12,7 @@ public class AllPage {
     private PreferencePage preferencePage;
     private SpinnerPage spinnerPage;
     private ViewsPage viewsPage;
+    private PopupMenuPage popupMenuPage;
 
 
     //public method olusturarak objectler vasitasiyle elementlere ulas
@@ -36,11 +37,40 @@ public class AllPage {
         return dragAndDropPage;
     }
 
-    public ExpandableListPage getExpandableListPage() {
+    public ExpandableListPage expandableListPage() {
         if (expandableListPage == null) {
             expandableListPage = new ExpandableListPage();
         }
         return expandableListPage;
     }
 
+    public PopupMenuPage popupMenuPage(){
+        if (popupMenuPage == null){
+            popupMenuPage = new PopupMenuPage();
+        }return popupMenuPage;
+    }
+
+    public PreferencePage preferencePage(){
+        if (preferencePage== null){
+            preferencePage = new PreferencePage();
+        }return preferencePage;
+    }
+
+    public PreferenceFromCodePage preferenceFromCodePage(){
+        if(preferenceFromCodePage == null){
+            preferenceFromCodePage = new PreferenceFromCodePage();
+        }return preferenceFromCodePage;
+    }
+
+    public SpinnerPage spinnerPage(){
+        if (spinnerPage == null){
+            spinnerPage = new SpinnerPage();
+        }return spinnerPage;
+    }
+
+    public ViewsPage viewsPage(){
+        if (viewsPage == null){
+            viewsPage = new ViewsPage();
+        }return viewsPage;
+    }
 }
