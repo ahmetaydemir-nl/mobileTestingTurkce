@@ -44,7 +44,7 @@ public class Driver {
             appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             } else if (ConfigReader.getProperty("platformName").equals("ios")) {
                 //if you do not provide app path so you should use "bundleId"
-                desiredCapabilities.setCapability("bundleId",ConfigReader.getProperty("iosBundleId"));
+                desiredCapabilities.setCapability("app","/Users/mehmetaliayyildiz/Library/Developer/Xcode/DerivedData/UICatalog-ecqqmvombjttcyabvgghnwwxuykx/Build/Products/Debug-iphonesimulator/UICatalog.app");
                 appiumDriver = new IOSDriver(appiumServerURL,desiredCapabilities);
                 appiumDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             } else {

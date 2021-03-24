@@ -1,6 +1,9 @@
 package pages;
 
 import pages.android.*;
+import pages.ios.AlertViews;
+import pages.ios.MainPage;
+import pages.ios.SwitchesPage;
 
 public class AllPage {
     //her class icin private object olustur
@@ -13,7 +16,9 @@ public class AllPage {
     private SpinnerPage spinnerPage;
     private ViewsPage viewsPage;
     private PopupMenuPage popupMenuPage;
-
+    private AlertViews alertViews;
+    private MainPage mainPage;
+    private SwitchesPage switchesPage;
 
     //public method olusturarak objectler vasitasiyle elementlere ulas
     public HomePage homePage() {
@@ -73,4 +78,24 @@ public class AllPage {
             viewsPage = new ViewsPage();
         }return viewsPage;
     }
+
+    public MainPage mainPage(){
+        if (mainPage == null){
+            mainPage = new MainPage();
+        }return mainPage;
+    }
+
+    public AlertViews alertViews(){
+        if(alertViews == null){
+            alertViews = new AlertViews();
+        }return alertViews;
+    }
+
+    public SwitchesPage switchesPage(){
+        if (switchesPage == null){
+            switchesPage = new SwitchesPage();
+        }return switchesPage;
+    }
+
+
 }
