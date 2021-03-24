@@ -11,3 +11,8 @@
      When kullanici "API Demos" sayfasina gidecek
      When kullanici "Views" sayfasina gidecek
      When kullanici "WebView" scroll yapacak
+
+   Scenario: dimanik scroll
+     When kullanici "API Demos" sayfasina gidecek
+     When kullanici "Views" sayfasina gidecek
+     When kullanici "WebView" scroll yapacak

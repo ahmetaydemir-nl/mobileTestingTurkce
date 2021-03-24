@@ -55,7 +55,7 @@ public class Arama {
         driver.findElementById("com.google.android.dialer:id/incall_end_call").click();
 
 
-        //app kapat
+         //app kapat
         driver.quit();
     }
 }

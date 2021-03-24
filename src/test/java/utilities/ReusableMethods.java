@@ -12,13 +12,16 @@ public class ReusableMethods {
 //bu metod ile aplikasyonun her sayfasina gidebilirsiniz parametre olaak safyanin adini metoda tanimlamalisiniz
     public static void goToPage(String pageName){
         List<WebElement> pages = Driver.getAppiumDriver().findElementsByXPath("//android.widget.TextView");
-
-        for (WebElement page : pages) {
-            if(page.getText().equals(pageName)){
-                page.click();
-                break;
+        if(pages.size()>0) {
+            for (WebElement page : pages) {
+                if (page.getText().equals(pageName)) {
+                    page.click();
+                    break;
+                }
             }
-
+        }else{
+            //eger element UI da gorunmuyorsa scroll yap ve tikla
+            scrollToText(pageName);
         }
     }
     //elementin gorunmesi bekliyecek
