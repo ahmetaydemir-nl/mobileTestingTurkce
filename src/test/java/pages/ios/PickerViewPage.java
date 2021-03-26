@@ -7,25 +7,20 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.time.Duration;
-import java.util.List;
 
-public class MainPage {
-    public MainPage(){
+public class PickerViewPage {
+    public PickerViewPage(){
         PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver(), Duration.ofSeconds(30)),this);
     }
 
-    @FindBy(id = "Alert Views")
-    public IOSElement alertViews;
+    @FindBy(id = "Red color component value")
+    public IOSElement firstPicker;
 
-    @FindBy(id = "Steppers")
-    public IOSElement steppers;
+    @FindBy(id = "Green color component value")
+    public IOSElement secondPicker;
 
-    @FindBy(id = "Switches")
-    public IOSElement switches;
-
-    @FindBy(id = "Picker View")
-    public IOSElement pickerView;
-
+    @FindBy(id = "Blue color component value")
+    public IOSElement thirdPicker;
 
 
 

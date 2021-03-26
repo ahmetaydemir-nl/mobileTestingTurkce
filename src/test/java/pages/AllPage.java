@@ -3,6 +3,7 @@ package pages;
 import pages.android.*;
 import pages.ios.AlertViews;
 import pages.ios.MainPage;
+import pages.ios.PickerViewPage;
 import pages.ios.SwitchesPage;
 
 public class AllPage {
@@ -19,6 +20,8 @@ public class AllPage {
     private AlertViews alertViews;
     private MainPage mainPage;
     private SwitchesPage switchesPage;
+    private PickerViewPage pickerViewPage;
+
 
     //public method olusturarak objectler vasitasiyle elementlere ulas
     public HomePage homePage() {
@@ -95,6 +98,13 @@ public class AllPage {
         if (switchesPage == null){
             switchesPage = new SwitchesPage();
         }return switchesPage;
+    }
+
+
+    public PickerViewPage pickerViewPage(){
+        if(pickerViewPage == null){
+            pickerViewPage = new PickerViewPage();
+        }return pickerViewPage;
     }
 
 
